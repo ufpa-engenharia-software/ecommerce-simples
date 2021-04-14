@@ -48,6 +48,11 @@ public class CacheConfiguration {
             createCache(cm, br.ufpa.ecommerce.domain.User.class.getName());
             createCache(cm, br.ufpa.ecommerce.domain.Authority.class.getName());
             createCache(cm, br.ufpa.ecommerce.domain.User.class.getName() + ".authorities");
+            createCache(cm, br.ufpa.ecommerce.domain.Usuario.class.getName());
+            createCache(cm, br.ufpa.ecommerce.domain.Endereco.class.getName());
+            createCache(cm, br.ufpa.ecommerce.domain.Produto.class.getName());
+            createCache(cm, br.ufpa.ecommerce.domain.Pedido.class.getName());
+            createCache(cm, br.ufpa.ecommerce.domain.ProdutoNoPedido.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
