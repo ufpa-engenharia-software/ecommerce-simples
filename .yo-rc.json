@@ -42,7 +42,9 @@
     "jwtSecretKey": "ZGQ4NGIyOGZlMzExMTg1NWYxYThiZGUxYzU2MjVmZjczMjRhOGFjODM4YjEyMDRmODdkMGRjNDA5ZTJjNDM5NDQxY2UxODZkNmFjYjYxZTQyYjNhMzc3YWYxYjA3MTA1NDdlNmIyNjc2Nzg1MjgzMGZlNDI3NTAxMGFkZmU4Mjk=",
     "clientTheme": "none",
     "clientThemeVariant": "",
-    "reactive": false
+    "reactive": false,
+    "entities": ["Usuario", "Endereco", "Produto", "Pedido", "ProdutoNoPedido"],
+    "lastLiquibaseTimestamp": 1618405326000
   },
   "git-provider": "GitHub",
   "git-company": "ufpa-engenharia-software",
