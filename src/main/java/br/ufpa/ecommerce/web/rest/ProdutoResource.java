@@ -198,4 +198,14 @@ public class ProdutoResource {
             .headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString()))
             .build();
     }
+
+    @GetMapping("/produtos/maisbaratos")
+    public ResponseEntity<List<ProdutoDTO>> getProdutomaisBarato() {
+        log.debug("REST request to get Produto Mais Barato");
+
+        List<ProdutoDTO> produtos = produtoService.findMaisBaratos();
+
+        return ResponseEntity.ok().body(produtos);
+
+    }
 }

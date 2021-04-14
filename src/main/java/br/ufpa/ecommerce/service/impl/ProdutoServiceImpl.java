@@ -5,6 +5,8 @@ import br.ufpa.ecommerce.repository.ProdutoRepository;
 import br.ufpa.ecommerce.service.ProdutoService;
 import br.ufpa.ecommerce.service.dto.ProdutoDTO;
 import br.ufpa.ecommerce.service.mapper.ProdutoMapper;
+
+import java.util.List;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -73,5 +75,11 @@ public class ProdutoServiceImpl implements ProdutoService {
     public void delete(Long id) {
         log.debug("Request to delete Produto : {}", id);
         produtoRepository.deleteById(id);
+    }
+
+    @Override
+    public List<ProdutoDTO> findMaisBaratos() {
+        List<Produto> listaDoBanco = produtoRepository.findMaisBaratos();
+        return produtoMapper.toDto(listaDoBanco);
     }
 }
